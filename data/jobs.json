@@ -1,0 +1,1035 @@
+{
+ "meta": {
+  "actualizado": "2026-11-12T16:18:06+00:00",
+  "reglas_version": "2026-11-12.2",
+  "entradas_total": 1405,
+  "tras_dedup": 954,
+  "sobreviven": 29,
+  "descartes": {
+   "area_fuera_de_tecnologia": 313,
+   "vieja_mas_de_45_dias": 155,
+   "nivel_no_junior": 148,
+   "profesion_no_tecnica": 127,
+   "ubicacion_no_latam": 122,
+   "ubicacion_desconocida": 34,
+   "sin_senal_de_nivel_junior": 17,
+   "exige_residencia_ciudadania": 6,
+   "titulo_indica_pais_fuera_de_latam": 3
+  },
+  "fuentes": {
+   "himalayas": {
+    "ok": true,
+    "entradas": 415,
+    "remotas_o_utiles": 415,
+    "sobreviven": 26
+   },
+   "getonboard": {
+    "ok": true,
+    "entradas": 624,
+    "remotas_o_utiles": 252,
+    "sobreviven": 3
+   },
+   "remoteok": {
+    "ok": true,
+    "entradas": 98,
+    "remotas_o_utiles": 98,
+    "sobreviven": 0
+   },
+   "weworkremotely": {
+    "ok": true,
+    "entradas": 100,
+    "remotas_o_utiles": 100,
+    "sobreviven": 0
+   },
+   "jobicy": {
+    "ok": true,
+    "entradas": 168,
+    "remotas_o_utiles": 168,
+    "sobreviven": 0
+   }
+  },
+  "fuentes_info": {
+   "himalayas": {
+    "nombre": "Himalayas",
+    "home": "https://himalayas.app",
+    "terminos": "https://himalayas.app/terms (seccion 'Terms and Conditions for API Users', #113)",
+    "condiciones": "Uso comercial permitido; el boton Aplicar debe usar applicationLink; identificar a Himalayas con enlace visible; no pasar a terceros."
+   },
+   "getonboard": {
+    "nombre": "Get on Board",
+    "home": "https://www.getonbrd.com",
+    "terminos": "https://www.getonbrd.com/help/que-puedo-hacer-con-la-api-de-get-on-board?lang=en (la API publica permite 'Display published jobs on another site')",
+    "condiciones": "API publica sin llave; se enlaza siempre a la oferta publica y se nombra la fuente."
+   },
+   "remoteok": {
+    "nombre": "Remote OK",
+    "home": "https://remoteok.com",
+    "terminos": "https://remoteok.com/api (aviso 'legal' en el primer elemento del JSON)",
+    "condiciones": "Enlazar a la URL de Remote OK (follow, sin nofollow) y mencionar Remote OK como fuente. No usar su logo."
+   },
+   "weworkremotely": {
+    "nombre": "We Work Remotely",
+    "home": "https://weworkremotely.com",
+    "terminos": "https://weworkremotely.com/remote-job-rss-feed",
+    "condiciones": "Feed publico; 'anyone can use the feed, all we ask is that you attribute the links back to We Work Remotely'."
+   },
+   "jobicy": {
+    "nombre": "Jobicy",
+    "home": "https://jobicy.com",
+    "terminos": "https://jobi.cy/apidocs (friendlyNotice del JSON de la API)",
+    "condiciones": "Acreditar a Jobicy con enlace directo; todos los botones de aplicar llevan a la URL original del feed."
+   }
+  },
+  "fuentes_descartadas": {
+   "remotive": "Sus terminos (github.com/remotive-com/remote-jobs-api) prohiben pasar sus vacantes a terceros y usarlas para 'collect signups/email addresses'; un boletin con suscripcion lo incumple. Ademas retrasa 24 h.",
+   "arbeitnow": "Foco Alemania/UE; no encontre terminos de redistribucion verificables y casi nada aplica a LatAm."
+  },
+  "max_dias": 45,
+  "max_anios": 2,
+  "areas": {
+   "dev": "Desarrollo",
+   "datos": "Datos",
+   "qa": "QA / Pruebas",
+   "soporte": "Soporte técnico",
+   "ia": "IA / Anotación",
+   "devops": "Infra / DevOps / Seguridad"
+  }
+ },
+ "jobs": [
+  {
+   "id": "himalayas:https://himalayas.app/companies/micro1/jobs/ai-conversation-evaluator",
+   "titulo": "AI Conversation Evaluator",
+   "empresa": "micro1",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/micro1/jobs/ai-conversation-evaluator?utm_source=api",
+   "fecha": "2026-11-12T11:20:30+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "mundo",
+   "paises": [],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "intermedio",
+   "salario": {
+    "min": 40,
+    "max": 75,
+    "moneda": "USD",
+    "periodo": "hourly"
+   },
+   "salario_texto": "USD 40–75 / hora",
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "sin restricción de país (Himalayas)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Role Title: AI Conversation Evaluator Role Type: Contractor Location: Remote – Global (English required) Opportunity Snapshot Pay: $45–70/hour Time commitment: Approximately 7.5 hours total Project kickoff: Sunday, November 15 Project…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/micro1/jobs/video-data-annotator-966806508",
+   "titulo": "Video Data Annotator",
+   "empresa": "micro1",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/micro1/jobs/video-data-annotator-966806508?utm_source=api",
+   "fecha": "2026-11-09T13:20:19+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "mundo",
+   "paises": [],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "sin restricción de país (Himalayas)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Role Title: Video Data Annotator Role Type: Contractor Location: Remote micro1 is engaging Video Data Annotators to contribute expertise and precision to a customer’s project focused on the advancement of artificial intelligence. In this…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/micro1/jobs/generalist-for-data-annotation-4376089855",
+   "titulo": "Generalist for Data Annotation",
+   "empresa": "micro1",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/micro1/jobs/generalist-for-data-annotation-4376089855?utm_source=api",
+   "fecha": "2026-11-07T00:20:27+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "mundo",
+   "paises": [],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "sin restricción de país (Himalayas)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Role Title: Generalist for Data Annotation Role Type: Contractor Location: Remote micro1 is engaging Generalists for Data Annotation to contribute to a customer’s innovative project. In this role, you'll apply your expertise to help train…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/micro1/jobs/video-annotation",
+   "titulo": "Video Annotation",
+   "empresa": "micro1",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/micro1/jobs/video-annotation?utm_source=api",
+   "fecha": "2026-11-02T12:20:14+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "mundo",
+   "paises": [],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "sin restricción de país (Himalayas)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Role Title: Video Annotation Role Type: Contractor Location: Remote micro1 is engaging Video Annotation experts to contribute to a dynamic customer project focused on high-impact data labeling. In this role, you'll apply your expertise to…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/welo-global/jobs/artemis-ai-data-rater-spanish",
+   "titulo": "Artemis AI Data Rater - Spanish",
+   "empresa": "Welo Global",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/welo-global/jobs/artemis-ai-data-rater-spanish?utm_source=api",
+   "fecha": "2026-11-06T08:27:54+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Chile",
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Chile, Mexico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "OVERVIEW Are you tech-savvy? Have a passion for quality? We are looking for Data Raters to work on projects aimed at advancing AI technologies. Join us for a unique chance to kickstart your career in the AI field! This project is an…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/commit/jobs/soc-analyst-3006663028",
+   "titulo": "SOC Analyst",
+   "empresa": "CommIT",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/commit/jobs/soc-analyst-3006663028?utm_source=api",
+   "fecha": "2026-11-05T11:01:19+00:00",
+   "area": "devops",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": 1,
+   "motivos": {
+    "ubicacion": "restringida a: Mexico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Description We’re looking for a Tier 1 SOC Analyst to join our team and handle initial triage, monitoring, and investigation of security alerts across cloud and endpoint environments. This is a client-facing role requiring strong English,…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/vana-foundation/jobs/developer-advocate-wizard",
+   "titulo": "Developer Advocate / Wizard",
+   "empresa": "Vana Foundation",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/vana-foundation/jobs/developer-advocate-wizard?utm_source=api",
+   "fecha": "2026-11-05T06:28:33+00:00",
+   "area": "dev",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Puerto Rico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Costa Rica, Cuba, Dominican Republic, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Puerto Rico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "About Vana Vana is the open network for user-owned data: people decide where their data goes and who trains AI on it, and share in what it creates. Builders reach it through UU API a tool developed by OpenDataLabs () on the Vana Network,…"
+  },
+  {
+   "id": "getonboard:conversational-ai-qa-specialist-evolution-collect-llc-remote",
+   "titulo": "Conversational AI QA Specialist",
+   "empresa": "Evolution Collect LLC",
+   "fuente": "getonboard",
+   "url": "https://www.getonbrd.com/jobs/conversational-ai-qa-specialist-evolution-collect-llc-remote",
+   "fecha": "2026-11-03T16:49:36+00:00",
+   "area": "qa",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": {
+    "min": 2900,
+    "max": 3200,
+    "moneda": "USD",
+    "periodo": "monthly"
+   },
+   "salario_texto": "USD 2,900–3,200 / mes",
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "100% remoto, sin región restringida (Get on Board, bolsa de LatAm)",
+    "nivel": "nivel de la fuente: junior"
+   },
+   "resumen": "Some QA or review experience: QA of any kind, AI data annotation or evaluation, content review or moderation (for example, tagging social media or political content), or contact center quality. This role is close to entry level, and we…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/your-personal-ai/jobs/video-session-moderator-ai-data-collection-remote-americas",
+   "titulo": "Video Session Moderator – AI Data Collection (Remote - Americas)",
+   "empresa": "Your Personal AI",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/your-personal-ai/jobs/video-session-moderator-ai-data-collection-remote-americas?utm_source=api",
+   "fecha": "2026-11-01T13:19:10+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": 1,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Guide participants through live video collection sessions for AI training datasets We're expanding our AI data collection operations across the Americas and need skilled moderators to conduct live video sessions with participants. You'll…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/binance/jobs/binance-accelerator-program-applied-ai-application-engineer-4805818739",
+   "titulo": "Binance Accelerator Program - Applied AI Application Engineer",
+   "empresa": "Binance",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/binance/jobs/binance-accelerator-program-applied-ai-application-engineer-4805818739?utm_source=api",
+   "fecha": "2026-11-01T13:14:25+00:00",
+   "area": "dev",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Binance is a leading global blockchain ecosystem behind the world’s largest cryptocurrency exchange by trading volume and registered users. Binance is trusted by more than 320 million people in 100+ countries for its industry-leading…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/netforemost-inc/jobs/trainee-flutter-developer",
+   "titulo": "Trainee Flutter Developer",
+   "empresa": "NetForemost, Inc",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/netforemost-inc/jobs/trainee-flutter-developer?utm_source=api",
+   "fecha": "2026-11-01T13:12:06+00:00",
+   "area": "dev",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "This is a remote position. ​Location: LATAM We are looking for an intern with a passion for mobile development and basic knowledge of Flutter. No prior work experience is required—just commitment, enthusiasm, and a desire to learn in a…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/kis-solutions/jobs/data-engineer-intern",
+   "titulo": "Data Engineer Intern",
+   "empresa": "KIS Solutions",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/kis-solutions/jobs/data-engineer-intern?utm_source=api",
+   "fecha": "2026-11-01T13:11:59+00:00",
+   "area": "datos",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "This is a remote position. If you want to build a career in technology, tackle meaningful challenges, and be part of a company committed to developing talent, we invite you to apply for the KIS Internship Program. This track is designed…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/quavanti/jobs/becario-de-desarrollo-de-software",
+   "titulo": "Becario de Desarrollo de Software",
+   "empresa": "Quavanti",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/quavanti/jobs/becario-de-desarrollo-de-software?utm_source=api",
+   "fecha": "2026-11-01T12:48:13+00:00",
+   "area": "dev",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "es",
+   "ingles": "intermedio",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Mexico (+otros)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "Categoría: Technology Ubicación: Estamos buscando practicantes de desarrollo de software que les interese aprender sobre el proceso de desarrollo de una nueva plataforma de software en proceso de levantamiento de Venture Capital (3 meses…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/valce-talent-solutions/jobs/associate-security-analyst",
+   "titulo": "Associate Security Analyst",
+   "empresa": "Valce Talent Solutions",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/valce-talent-solutions/jobs/associate-security-analyst?utm_source=api",
+   "fecha": "2026-11-01T12:03:13+00:00",
+   "area": "devops",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Mexico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Hello, we are looking for a Associate Security Analyst, in Mexico , who will be responsible for investigating and defending against cybersecurity incidents such as credential theft phishing attacks, domain abuse, social media…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/my-va-support-inc/jobs/web-developer",
+   "titulo": "Web Developer",
+   "empresa": "My VA Support, Inc.",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
+   "fecha": "2026-11-01T11:57:20+00:00",
+   "area": "dev",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": 1,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "This is a remote position. Only LATAM-based candidates (bilingual in Spanish and English) The Role This position is best suited for a candidate with early to mid-level experience in WordPress development. We are looking for someone who can…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/welocalize/jobs/ai-video-annotator-9494055006",
+   "titulo": "AI Video Annotator",
+   "empresa": "Welocalize",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/welocalize/jobs/ai-video-annotator-9494055006?utm_source=api",
+   "fecha": "2026-11-01T11:56:36+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Brazil",
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Brazil, Mexico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "About the Role We are looking for detail-oriented annotators to help label robot manipulation videos for AI training purposes. You'll watch short videos of robots performing manipulation tasks (filmed from three synchronized camera angles)…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/resolv-global/jobs/junior-ai-ml-engineer",
+   "titulo": "Junior AI/ML Engineer",
+   "empresa": "Resolv.Global",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/resolv-global/jobs/junior-ai-ml-engineer?utm_source=api",
+   "fecha": "2026-11-01T11:47:16+00:00",
+   "area": "datos",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Colombia",
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "intermedio",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": 1,
+   "motivos": {
+    "ubicacion": "restringida a: Colombia, Mexico (+otros)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "Description We are hiring Junior AI/ML Engineers to help build AI agents that handle customer conversations through voice and chat. You'll work on the retrieval, orchestration, APIs, and integrations behind these systems, helping turn…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph",
+   "titulo": "Data Analyst | 100% Remote | LATAM - PH",
+   "empresa": "Prometeo Talent",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph?utm_source=api",
+   "fecha": "2026-11-01T11:44:36+00:00",
+   "area": "datos",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": 0,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Data Analyst About Us Prometeo Talent is a recruitment agency with a strong presence across the Americas and Europe. We specialize in connecting companies with exceptional tech and engineering professionals. We have partnered with a…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/prometeo-talent/jobs/machine-learning-analyst-100-remote-latam",
+   "titulo": "Machine Learning Analyst | 100% Remote | LATAM",
+   "empresa": "Prometeo Talent",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/prometeo-talent/jobs/machine-learning-analyst-100-remote-latam?utm_source=api",
+   "fecha": "2026-11-01T11:44:28+00:00",
+   "area": "datos",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": 0,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "About Us Prometeo Talent is a recruitment agency with a strong presence across the Americas and Europe. We specialize in connecting companies with exceptional professionals across data, analytics, and business functions. We have partnered…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/arctiq/jobs/soc-analyst",
+   "titulo": "SOC Analyst",
+   "empresa": "Arctiq",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/arctiq/jobs/soc-analyst?utm_source=api",
+   "fecha": "2026-11-01T11:37:49+00:00",
+   "area": "devops",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Puerto Rico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Costa Rica, Cuba, Dominican Republic, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Puerto Rico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Company Overview: Arctiq is a global, intelligence-driven technology services company delivering professional and managed services across Hybrid Cloud Infrastructure, Networking & Connected Experiences, Cybersecurity, Data & AI, Autonomous…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/expedock/jobs/data-annotator-latam",
+   "titulo": "Data Annotator - LATAM",
+   "empresa": "Expedock",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/expedock/jobs/data-annotator-latam?utm_source=api",
+   "fecha": "2026-11-01T11:37:38+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Uruguay, Venezuela (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Employment Type:Project-based Location: Remote: USA, LATAM About Expedock We are a tech-enabled workforce augmentation platform leveraging top 1% offshore talent & cutting edge technology to enable businesses to unlock their full potential…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/hire-hangar/jobs/junior-data-analyst-2593566728",
+   "titulo": "Junior Data Analyst",
+   "empresa": "Hire Hangar",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/hire-hangar/jobs/junior-data-analyst-2593566728?utm_source=api",
+   "fecha": "2026-11-01T00:24:23+00:00",
+   "area": "datos",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Chile",
+    "Colombia",
+    "Dominican Republic",
+    "Ecuador",
+    "Honduras",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Uruguay"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Chile, Colombia, Dominican Republic, Ecuador, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay (+otros)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "Join Hire Hangar and work with fast-growing global companies while building a long-term career. Job Title: Junior Data Analyst Location: Remote Working Hours: US Time Zone (PST - EST) Are you eager to get started in the world of data…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/tether-operations-limited/jobs/research-engineer-intern-video-multimodal-llm",
+   "titulo": "Research Engineer Intern (Video/Multimodal LLM)",
+   "empresa": "Tether Operations Limited",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/tether-operations-limited/jobs/research-engineer-intern-video-multimodal-llm?utm_source=api",
+   "fecha": "2026-10-29T17:02:07+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "latam",
+   "paises": [
+    "Argentina",
+    "Bolivia",
+    "Brazil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Mexico",
+    "Nicaragua",
+    "Panama",
+    "Peru",
+    "Uruguay"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Dominican Republic, Ecuador, El Salvador, Guatemala, Mexico, Nicaragua, Panama, Peru, Uruguay (+otros)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "Join Tether and Shape the Future of Digital Finance At Tether, we’re not just building products, we’re pioneering a global financial revolution. Our cutting-edge solutions empower businesses—from exchanges and wallets to payment processors…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/human-quality-hqp/jobs/it-support-agent",
+   "titulo": "IT Support Agent",
+   "empresa": "Human Quality - HQP",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/human-quality-hqp/jobs/it-support-agent?utm_source=api",
+   "fecha": "2026-10-29T05:08:27+00:00",
+   "area": "soporte",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "es",
+   "ingles": "avanzado",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Mexico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Posición: IT Support Agent Actividades principales Brindar soporte técnico a usuarios a través de teléfono, chat y correo electrónico, atendiendo incidentes relacionados con hardware, software, aplicaciones y dispositivos. Diagnosticar y…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/telus-international-ai-inc/jobs/online-ad-rater-spanish-speakers-in-mexico",
+   "titulo": "Online Ad Rater - Spanish speakers in Mexico",
+   "empresa": "TELUS International AI Inc",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/telus-international-ai-inc/jobs/online-ad-rater-spanish-speakers-in-mexico?utm_source=api",
+   "fecha": "2026-10-19T14:03:35+00:00",
+   "area": "ia",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "restringida a: Mexico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Looking for a remote freelance project with flexible hours and no experience needed that makes a difference in the world of technology? If you are passionate about staying ahead of the tech curve, this part-time role is the perfect fit! A…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/dyopath/jobs/service-desk-level-1-analyst-mexico-2467118854",
+   "titulo": "Service Desk Level 1 Analyst (Mexico)",
+   "empresa": "DYOPATH",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/dyopath/jobs/service-desk-level-1-analyst-mexico-2467118854?utm_source=api",
+   "fecha": "2026-10-17T08:48:15+00:00",
+   "area": "soporte",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": 1,
+   "motivos": {
+    "ubicacion": "restringida a: Mexico (+otros)",
+    "nivel": "nivel de la fuente: entry-level"
+   },
+   "resumen": "Join DYOPATH as a Service Desk Level 1 Analyst Are you energized by solving technical puzzles and helping people stay connected and productive? DYOPATH is looking for a Service Desk Level 1 Analyst who is motivated, eager to learn, and…"
+  },
+  {
+   "id": "himalayas:https://himalayas.app/companies/trueml/jobs/jr-devops-engineer",
+   "titulo": "Jr. DevOps Engineer",
+   "empresa": "TrueML",
+   "fuente": "himalayas",
+   "url": "https://himalayas.app/companies/trueml/jobs/jr-devops-engineer?utm_source=api",
+   "fecha": "2026-10-07T19:01:43+00:00",
+   "area": "devops",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Argentina",
+    "Mexico"
+   ],
+   "incluye_mexico": true,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": {
+    "min": 38000,
+    "max": 42000,
+    "moneda": "USD",
+    "periodo": "annual"
+   },
+   "salario_texto": "USD 38,000–42,000 / año",
+   "anios_pedidos": 1,
+   "motivos": {
+    "ubicacion": "restringida a: Argentina, Mexico (+otros)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "Why TrueML ? TrueML is a mission-driven financial software company that aims to create better customer experiences for distressed borrowers. Consumers today want personal, digital-first experiences that align with their lifestyles,…"
+  },
+  {
+   "id": "getonboard:data-analyst-i-signant-health-remote-947a",
+   "titulo": "Data Analyst I",
+   "empresa": "Signant Health",
+   "fuente": "getonboard",
+   "url": "https://www.getonbrd.com/jobs/data-analyst-i-signant-health-remote-947a",
+   "fecha": "2026-10-29T15:23:03+00:00",
+   "area": "datos",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Chile"
+   ],
+   "incluye_mexico": false,
+   "idioma": "en",
+   "ingles": "si",
+   "salario": {
+    "min": 1000,
+    "max": 1300,
+    "moneda": "USD",
+    "periodo": "monthly"
+   },
+   "salario_texto": "USD 1,000–1,300 / mes",
+   "anios_pedidos": 1,
+   "motivos": {
+    "ubicacion": "remoto solo dentro de Chile (país de la empresa en Get on Board)",
+    "nivel": "nivel de la fuente: junior"
+   },
+   "resumen": "Education 1-3 years of experience working in a data-driven environment. Working knowledge of Structured Query Language (SQL), as well as Microsoft Windows 2000/2003/XP and the suite of Microsoft Office applications. Experience with…"
+  },
+  {
+   "id": "getonboard:ai-trainee-aprendiz-de-inteligencia-artificial-factor-it-remote",
+   "titulo": "Aprendiz de Inteligencia Artificial Contrato Sena",
+   "empresa": "Factor IT",
+   "fuente": "getonboard",
+   "url": "https://www.getonbrd.com/jobs/ai-trainee-aprendiz-de-inteligencia-artificial-factor-it-remote",
+   "fecha": "2026-10-19T20:53:42+00:00",
+   "area": "datos",
+   "nivel": "junior",
+   "acepta": "pais",
+   "paises": [
+    "Chile"
+   ],
+   "incluye_mexico": false,
+   "idioma": "es",
+   "ingles": "intermedio",
+   "salario": null,
+   "salario_texto": null,
+   "anios_pedidos": null,
+   "motivos": {
+    "ubicacion": "remoto solo dentro de Chile (país de la empresa en Get on Board)",
+    "nivel": "título dice junior/entry/trainee/becario"
+   },
+   "resumen": "Estar habilitado/a para firmar contrato de aprendizaje SENA, en una de estas dos modalidades: Tecnólogo/a en Análisis y Desarrollo de Software (ADSO) o afines, del SENA u otra institución reconocida, que esté por iniciar o cursando su…"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cómo filtramos — Remoto Junior</title>
+<meta name="description" content="Las reglas exactas, sin magia, con las que Remoto Junior decide qué vacantes remotas son aptas para juniors de LatAm.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="./">Remoto<b>Junior</b></a>
+  <nav><a href="./">Vacantes</a><a href="como-filtramos.html" aria-current="page">Cómo filtramos</a><a href="./#suscribir">Boletín</a></nav>
+</div></header>
+<main class="wrap prose">
+  <h1>Cómo filtramos</h1>
+  <p>Sin IA y sin puntajes opacos: son reglas escritas en <code>collector/classify.py</code> (versión <code id="ver">–</code>). Una vacante tiene que pasar <strong>todas</strong>; si falla una, se descarta y se cuenta. No son perfectas: un texto ambiguo puede colar o dejar fuera una vacante buena. Por eso cada tarjeta tiene "¿Por qué pasó el filtro?".</p>
+  <p id="cifras"></p>
+
+  <h2>1. ¿Acepta a LatAm?</h2>
+  <p>Depende de lo que declara cada fuente:</p>
+  <table>
+    <tr><th>Fuente</th><th>Pasa si…</th><th>Se descarta si…</th></tr>
+    <tr><td>Himalayas</td><td>no tiene restricción de país, o la lista de países permitidos incluye algún país de LatAm</td><td>la lista no incluye LatAm, o exige una zona horaria fuera de UTC-3 a UTC-7</td></tr>
+    <tr><td>Get on Board</td><td>modalidad 100% remota (sin país, o con países de LatAm) o remota dentro de un país de LatAm</td><td>híbrida, presencial, o países fuera de LatAm</td></tr>
+    <tr><td>We Work Remotely</td><td>región "Anywhere in the World" o LatAm</td><td>cualquier otra región (USA Only, Europe Only, Asia Only…)</td></tr>
+    <tr><td>Jobicy</td><td>geo "Anywhere", "LATAM" o países de LatAm</td><td>geo sin LatAm</td></tr>
+    <tr><td>Remote OK</td><td>el campo ubicación dice worldwide/anywhere/LatAm o un país de LatAm; si está vacío, solo si la descripción dice explícitamente worldwide/anywhere/LatAm</td><td>ubicación sin LatAm, o vacía sin ninguna pista (la tratamos como "desconocida": no adivinamos)</td></tr>
+  </table>
+  <p>Además, sin importar la fuente, se descarta si el título o la descripción contienen frases como <code>must be located in the US/UK/Canada/EU</code>, <code>US citizen</code>, <code>authorized to work in the US</code>, <code>security clearance</code>, <code>green card</code>, <code>W-2</code>, <code>EU/EEA only</code> o "residencia en EE. UU./España/Europa" (lista completa en <code>RE_RESIDENCIA</code>).</p>
+  <p>Etiquetas: <em>Desde cualquier país</em> (worldwide), <em>Abierta a LatAm</em> (3+ países de LatAm o declarada LatAm) y <em>Solo ciertos países</em> (te mostramos cuáles). El filtro "Incluye México" deja las dos primeras y las de lista que nombran México.</p>
+
+  <h2>2. ¿Es junior?</h2>
+  <ul>
+    <li><strong>Se descarta</strong> si la fuente marca el nivel como mid, senior, manager, director, semi-senior o experto; si el título dice senior/sr/lead/principal/staff/manager/architect/mid-level, a menos que también diga junior.</li>
+    <li><strong>Se descarta</strong> si la descripción pide <strong>3 o más años</strong> de experiencia (usamos el número más alto que aparezca junto a "years/años of experience/experiencia"; puede excluir alguna vacante buena que mencione años en otro contexto, y lo preferimos a lo contrario).</li>
+    <li><strong>Junior / Entry</strong>: el título dice junior, jr, entry-level, trainee, intern, becario, practicante, graduate…, o la fuente marca Entry-level/Junior/Sin experiencia.</li>
+    <li><strong>Apto sin mucha experiencia</strong>: no es "junior" explícito, pero la descripción dice sin experiencia / entry-level / recién egresado, o pide máximo 2 años.</li>
+    <li>Si no hay <strong>ninguna señal</strong> de nivel (ni título, ni fuente, ni años), se descarta: no vamos a llamar junior a algo que no lo dice.</li>
+  </ul>
+
+  <h2>3. Área</h2>
+  <p>Se decide por el <strong>título</strong> (con prioridad IA/anotación, QA, soporte técnico, datos, infra/DevOps/seguridad, desarrollo) y, solo en Get on Board, por su categoría como respaldo. Fuera quedan ventas, marketing, atención a clientes sin componente técnico, traducción/interpretación y profesiones reguladas (médicos, abogados, contadores…). Las vacantes de anotación de IA que piden título profesional se descartan por esto último.</p>
+
+  <h2>4. Inglés requerido</h2>
+  <ul>
+    <li><strong>Avanzado</strong>: aparece fluent, C1/C2, advanced, native o bilingüe/bilingual.</li>
+    <li><strong>Intermedio</strong>: B1/B2, intermediate, conversational.</li>
+    <li><strong>Inglés requerido</strong>: se menciona inglés sin nivel, o toda la descripción está en inglés (asumimos que la entrevista también).</li>
+    <li><strong>Sin inglés</strong>: descripción en español y sin mención de inglés. Detectamos el idioma contando palabras comunes, no es infalible.</li>
+  </ul>
+
+  <h2>5. Salario</h2>
+  <p>Solo mostramos el que la fuente publica, con su moneda y periodo originales (por hora, mes o año). No convertimos ni estimamos. Get on Board publica USD por mes; Remote OK, USD por año.</p>
+
+  <h2>6. Duplicados y antigüedad</h2>
+  <p>Misma empresa + mismo título (normalizado) = una sola vacante; se queda la que trae salario y, si no, la más reciente. Se descartan las publicadas hace más de <span id="dias">45</span> días.</p>
+
+  <h2>Qué descartamos y por qué (última corrida)</h2>
+  <div id="descartes"></div>
+
+  <h2>Fuentes que NO usamos</h2>
+  <ul id="nousadas"></ul>
+
+  <h2>Fuentes que sí usamos y sus términos</h2>
+  <ul id="siusadas"></ul>
+</main>
+<footer><div class="wrap"><p>Si ves una vacante que no debería estar (o falta una que sí), escribe a bussnestjesus2005@gmail.com con el enlace y ajustamos la regla.</p></div></footer>
+<script>
+(function(){
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+  var NOM={ubicacion_no_latam:"La ubicación declarada no incluye LatAm",ubicacion_desconocida:"Ubicación no declarada (Remote OK) y sin pistas",exige_residencia_ciudadania:"El texto exige residencia o ciudadanía de EE. UU./UE/UK/Canadá",profesion_no_tecnica:"Profesión no técnica o regulada",area_fuera_de_tecnologia:"Área fuera de tecnología",nivel_no_junior:"Nivel medio/senior o pide 3+ años",sin_senal_de_nivel_junior:"Sin ninguna señal de nivel junior",datos_incompletos:"Faltaba título o enlace",titulo_indica_pais_fuera_de_latam:"El título declara un país fuera de LatAm, p. ej. (US) o (CAN)",vieja_mas_de_45_dias:"Publicada hace más de 45 días"};
+  fetch("data/jobs.json").then(function(r){return r.json()}).then(function(d){
+    var m=d.meta; document.getElementById("ver").textContent=m.reglas_version; document.getElementById("dias").textContent=m.max_dias;
+    document.getElementById("cifras").innerHTML="Última corrida: <strong>"+m.entradas_total+"</strong> vacantes recibidas de las fuentes, <strong>"+m.tras_dedup+"</strong> únicas, <strong>"+m.sobreviven+"</strong> pasaron.";
+    var rows=Object.keys(m.descartes).map(function(k){return "<tr><td>"+esc(NOM[k]||k)+"</td><td>"+m.descartes[k]+"</td></tr>"}).join("");
+    document.getElementById("descartes").innerHTML="<table><tr><th>Motivo (se cuenta el primero que falla)</th><th>Vacantes</th></tr>"+rows+"</table>";
+    document.getElementById("nousadas").innerHTML=Object.keys(m.fuentes_descartadas).map(function(k){return "<li><strong>"+esc(k)+"</strong>: "+esc(m.fuentes_descartadas[k])+"</li>"}).join("");
+    document.getElementById("siusadas").innerHTML=Object.keys(m.fuentes_info).map(function(k){var f=m.fuentes_info[k],e=m.fuentes[k]||{};return "<li><a href=\""+esc(f.home)+"\" rel=\"noopener\">"+esc(f.nombre)+"</a> — "+esc(f.condiciones)+" Términos: "+esc(f.terminos)+". Última corrida: "+(e.ok?e.entradas+" recibidas, "+e.sobreviven+" pasaron":"falló, no aportó")+".</li>"}).join("");
+  }).catch(function(){document.getElementById("cifras").textContent="No se pudieron cargar las cifras (sirve la carpeta con un servidor local)."});
+})();
+</script>
+</body>
+</html>

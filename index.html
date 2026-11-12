@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remoto Junior — vacantes remotas reales para juniors de LatAm</title>
+<meta name="description" content="Bolsa de trabajo y boletín semanal con vacantes remotas de tecnología que sí aceptan a juniors de Latinoamérica. Sin residencia en EE. UU. ni 3+ años de experiencia.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="./">Remoto<b>Junior</b></a>
+  <nav><a href="./" aria-current="page">Vacantes</a><a href="como-filtramos.html">Cómo filtramos</a><a href="#suscribir">Boletín</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Remoto de verdad, <em>para juniors</em> de LatAm.</h1>
+    <p>Las bolsas "remotas" están llenas de puestos que piden vivir en EE. UU. o 3+ años de experiencia. Aquí revisamos cada vacante con reglas públicas y solo dejamos las que de verdad te dejan aplicar.</p>
+    <div class="stats">
+      <span><strong id="s-ok">–</strong> vacantes que pasaron el filtro</span>
+      <span><strong id="s-in">–</strong> vacantes distintas revisadas en la última corrida</span>
+      <span>Última actualización: <strong id="s-upd" style="font-size:1rem">–</strong></span>
+    </div>
+  </section>
+
+  <section class="filters" aria-label="Filtros"><div class="row">
+    <input id="q" type="search" placeholder="Buscar puesto o empresa" aria-label="Buscar puesto o empresa">
+    <select id="area" aria-label="Área"><option value="">Todas las áreas</option></select>
+    <select id="ing" aria-label="Inglés requerido">
+      <option value="">Inglés: cualquiera</option>
+      <option value="sin">Sin inglés</option>
+      <option value="hasta_inter">Hasta intermedio</option>
+      <option value="avanzado">Solo avanzado</option>
+    </select>
+    <label class="chk"><input type="checkbox" id="sal"> Con salario</label>
+    <label class="chk"><input type="checkbox" id="mx"> Incluye México</label>
+    <label class="chk"><input type="checkbox" id="jr"> Solo "junior" explícito</label>
+  </div></section>
+
+  <p id="count" role="status" aria-live="polite"></p>
+  <ul class="jobs" id="list"><li class="empty">Cargando vacantes…</li></ul>
+
+  <section class="sub" id="suscribir">
+    <h2>Un correo por semana, sin relleno</h2>
+    <p>Las mejores vacantes de la semana y un consejo práctico. Nada de spam, y te das de baja con un correo.</p>
+    <form id="sub-form">
+      <input id="sub-mail" type="email" required placeholder="tu@correo.com" aria-label="Tu correo">
+      <button class="btn" type="submit">Quiero el boletín</button>
+    </form>
+    <small>Por ahora se abre tu app de correo con un mensaje listo para enviar a bussnestjesus2005@gmail.com; la suscripción es manual hasta que haya un servicio de boletines.</small>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p><strong>Fuentes y atribución.</strong> Cada vacante enlaza a su fuente original; aquí no se aplica, se aplica allá. Datos de:</p>
+  <ul id="src"></ul>
+  <p>Remoto Junior no es reclutador ni garantiza respuesta de ninguna empresa. Revisa siempre la oferta original. Hecho en Mazatlán, México.</p>
+</div></footer>
+<script src="js/app.js"></script>
+</body>
+</html>
