@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jesus-jazisenot.github.io/remoto-junior/sitemap.xml
