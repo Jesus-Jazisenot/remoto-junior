@@ -1,0 +1,58 @@
+name: Actualizar vacantes y publicar
+
+on:
+  schedule:
+    - cron: "17 12 * * *"   # 12:17 UTC = 06:17 Mazatlan; evita la hora en punto
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30   # la corrida local tardo ~15 min por esperas de rate limit y un Get on Board lento
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: site
+      - name: Preparar carpetas (el repo es el sitio; el recolector vive en site/collector)
+        run: cp -r site/collector collector
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Recolectar (solo libreria estandar, sin pip install)
+        run: python collector/run.py
+      - name: Verificar que hay datos antes de publicar
+        run: |
+          python - <<'PY'
+          import json, sys
+          d = json.load(open("site/data/jobs.json", encoding="utf-8"))
+          n = len(d["jobs"])
+          print("vacantes publicadas:", n)
+          # si todas las fuentes cayeron o casi nada sobrevive, NO se publica una pagina vacia
+          if d["meta"]["entradas_total"] < 50 or n < 5:
+              sys.exit("Datos sospechosamente pobres; se conserva la version anterior del sitio")
+          PY
+      - name: Quitar del sitio lo que no se publica
+        run: rm -rf site/collector site/.github site/.gitignore
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
