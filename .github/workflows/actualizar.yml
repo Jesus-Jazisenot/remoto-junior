@@ -2,7 +2,11 @@ name: Actualizar vacantes y publicar
 
 on:
   schedule:
-    - cron: "17 12 * * *"   # 12:17 UTC = 06:17 Mazatlan; evita la hora en punto
+    # Mazatlan = UTC-7 todo el ano. GitHub retrasa los cron en horas de carga:
+    # el 13 y 14-nov-2026 el de 12:17 UTC arranco 7 h 20 min y 5 h 40 min tarde.
+    # Por eso hay dos: uno de madrugada (colchon para el retraso) y otro a la hora deseada.
+    - cron: "43 7 * * *"    # 07:43 UTC = 00:43 Mazatlan
+    - cron: "17 13 * * *"   # 13:17 UTC = 06:17 Mazatlan
   workflow_dispatch: {}
 
 permissions:
